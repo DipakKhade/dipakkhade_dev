@@ -32,7 +32,7 @@ const Connect: FC<ConnectProps> = () => {
 
   const Submission = async (data: FieldValues) => {
     const local='http://localhost:3000/'
-    const domain = "https://protfolio-with-next-js.vercel.app/";
+    const domain = "https://dipakkhade-dev.vercel.app/";
     const res = await fetch(`${domain}/api/users`, {
       method: "POST",
       headers: {
