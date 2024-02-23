@@ -16,6 +16,8 @@ import dockerlogo from "../images/docker_logo.webp";
 import gitlogo from "../images/git_logo.png";
 import redislogo from "../images/redis_logo.png"
 import reduxlogo from '../images/redux_logo.webp'
+import prismalogo from '../images/prismalogo.png'
+import postgreslogo from '../images/postgreslogo.png'
 
 interface KnownThingsProps {}
 
@@ -58,7 +60,8 @@ const KnownThings: FC<KnownThingsProps> = () => {
           title: "DataBase",
           skills: [
             { tag: "MongoDB", logo: mongologo },
-            { tag: "MySQL", logo: mysqllogo },
+            { tag: "Postgres", logo: postgreslogo },
+            { tag: "Prisma", logo: prismalogo },
           ],
         },
         {
