@@ -60,7 +60,7 @@ const KnownThings: FC<KnownThingsProps> = () => {
           title: "DataBase",
           skills: [
             { tag: "MongoDB", logo: mongologo },
-            { tag: "Postgres", logo: postgreslogo },
+            { tag: "Postgresql", logo: postgreslogo },
             { tag: "Prisma", logo: prismalogo },
           ],
         },
