@@ -18,6 +18,7 @@ import redislogo from "../images/redis_logo.png"
 import reduxlogo from '../images/redux_logo.webp'
 import prismalogo from '../images/prismalogo.png'
 import postgreslogo from '../images/postgreslogo.png'
+import recoillogo from '../images/recoillogo.jpg'
 
 interface KnownThingsProps {}
 
@@ -44,6 +45,7 @@ const KnownThings: FC<KnownThingsProps> = () => {
             { tag: "React.js", logo: react },
             { tag: "Next.js", logo: nextlogo },
             { tag: "Redux", logo: reduxlogo },
+            { tag: "Recoil", logo: recoillogo },
           ],
         },
         {
