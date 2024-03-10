@@ -20,8 +20,8 @@ export const projects = [
   {
     title: "Blogs",
     description:
-      "  Next js 14  , Tailwind CSS , MongoDB , Next Auth ",
-    link:"https://dipak-khade-blogs.vercel.app/",
+      "  Next js 14  , Recoil , Prisma , Postgresql ,  JsonWebTokens , axios , bcrypt , Contentful , shadcn ui  ",
+    link:"https://github.com/DipakKhade/drk",
   },
   
   {
