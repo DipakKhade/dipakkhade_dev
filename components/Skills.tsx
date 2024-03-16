@@ -19,7 +19,7 @@ import reduxlogo from '../images/redux_logo.webp'
 import prismalogo from '../images/prismalogo.png'
 import postgreslogo from '../images/postgreslogo.png'
 import recoillogo from '../images/recoillogo.jpg'
-
+import zodlogo from '../images/zod_logo.png'
 interface KnownThingsProps {}
 
 interface Skill {
@@ -53,6 +53,7 @@ const KnownThings: FC<KnownThingsProps> = () => {
           skills: [
             { tag: "Node.js", logo: nodejslogo },
             { tag: "Express.js", logo: expressjslogo },
+            { tag: "Zod", logo: zodlogo },
             { tag: "Next Auth", logo: nextauthlogo },
             { tag: "JavaScript", logo: jslogo }, 
             { tag: "Redis", logo: redislogo },
