@@ -22,6 +22,7 @@ const Connect: FC<ConnectProps> = () => {
 // console.log(session)
   const [isSubtting, setIsSubtting] = useState(false);
   const [sucessmsg, setSucessmsg] = useState(false);
+  const [loading ,setLoading]=useState(false)
   //react hook form
   const {
     register,
@@ -31,6 +32,7 @@ const Connect: FC<ConnectProps> = () => {
   } = useForm();
 
   const Submission = async (data: FieldValues) => {
+    setLoading(true)
     const local='http://localhost:3000/'
     const domain = "https://dipakkhade-dev.vercel.app/";
     const res = await fetch(`${domain}/api/users`, {
@@ -46,6 +48,7 @@ const Connect: FC<ConnectProps> = () => {
 
     toast.success("Message send successfully ");
     reset();
+    setLoading(false)
 
 
   };
@@ -174,7 +177,9 @@ const Connect: FC<ConnectProps> = () => {
                 htmlFor="message"
                 className="block mb-2 text-sm font-medium  "
               >
+
                 Your Message
+
               </label>
               <textarea
                 {...register("message")}
@@ -187,9 +192,25 @@ const Connect: FC<ConnectProps> = () => {
             <button
               disabled={isSubmitting}
               type="submit"
-              className="py-3 px-5 text-sm font-medium text-center bg-blue-500 dark:bg-gray-800 rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300  disabled:bg-gray-800"
+              className="py-3 px-5 text-sm font-medium text-center bg-blue-400 dark:bg-gray-800 rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 text-blue-700"
             >
-              Send message
+
+            {
+              loading ? 
+              <div className="flex">
+<div
+  className="inline-block h-6 w-6 p-1 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-primary motion-reduce:animate-[spin_1.5s_linear_infinite]"
+  role="status">
+  <span
+    className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+    >Loading...</span>
+</div>
+              <p className="pl-2 pt-1"> Processing...</p>      
+              </div>
+
+             :  <span> Send message  </span>
+          }
+             
             </button>
           </form>
         </div>
