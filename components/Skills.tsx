@@ -20,6 +20,8 @@ import prismalogo from '../images/prismalogo.png'
 import postgreslogo from '../images/postgreslogo.png'
 import recoillogo from '../images/recoillogo.jpg'
 import zodlogo from '../images/zod_logo.png'
+import turborepologo from '../images/turborepo_logo.png'
+
 interface KnownThingsProps {}
 
 interface Skill {
@@ -72,6 +74,7 @@ const KnownThings: FC<KnownThingsProps> = () => {
           skills: [
             { tag: "Docker", logo: dockerlogo },
             { tag: "Git", logo: gitlogo },
+            { tag: "turborepo", logo: turborepologo },
           ],
         },
       ];
