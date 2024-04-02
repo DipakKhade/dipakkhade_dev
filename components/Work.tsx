@@ -21,13 +21,13 @@ export const projects = [
     title: "Blogs",
     description:
       "  Next js 14  , NextAuth , tailwindcss , Docker , Recoil , Prisma , Postgresql ,  JsonWebTokens , axios , bcrypt , Contentful , shadcn ui  ",
-    link:"https://dipakkhade-dev.vercel.app",
+    link:"https://drk-sigma.vercel.app/",
   },
   
   {
     title: "Resume Builder",
     description:
-      "Turborepo , React , Express , tailwindcss , pdfkit ",
+      "Turborepo , React , Express , tailwindcss , pdfkit ,authentication using cookies",
     link: "https://github.com/DipakKhade/resume-builder",
   },
   
