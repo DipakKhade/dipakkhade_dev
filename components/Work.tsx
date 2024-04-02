@@ -20,15 +20,15 @@ export const projects = [
   {
     title: "Blogs",
     description:
-      "  Next js 14  , Recoil , Prisma , Postgresql ,  JsonWebTokens , axios , bcrypt , Contentful , shadcn ui  ",
-    link:"https://github.com/DipakKhade/drk",
+      "  Next js 14  , NextAuth , tailwindcss , Docker , Recoil , Prisma , Postgresql ,  JsonWebTokens , axios , bcrypt , Contentful , shadcn ui  ",
+    link:"https://dipakkhade-dev.vercel.app",
   },
   
   {
-    title: "e commerce website",
+    title: "Resume Builder",
     description:
-      "Next js 14 , JavaScript , Tailwind CSS , MongoDB , Next Auth",
-    link: "https://github.com/DipakKhade/ClothInference/tree/main/clothinference",
+      "Turborepo , React , Express , tailwindcss , pdfkit ",
+    link: "https://github.com/DipakKhade/resume-builder",
   },
   
   {
