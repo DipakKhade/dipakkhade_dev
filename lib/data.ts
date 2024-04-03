@@ -15,8 +15,8 @@ href:'/#projects'
 
   {
 name:'Blogs',
-routename:'https://dipakkhade.vercel.app/',
-href:'https://dipakkhade.vercel.app/'
+routename:'https://drk-sigma.vercel.app/blogs',
+href:'https://drk-sigma.vercel.app/blogs'
   },
   
   
