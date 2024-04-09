@@ -34,7 +34,7 @@ export function TypewriterEffectSmoothDemo() {
           Join Discord Server
         </button>
         </Link>
-        <Link href='https://dipak-khade-blogs.vercel.app/'>
+        <Link href='https://drk-sigma.vercel.app/blogs'>
         <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
           Blogs
         </button>
