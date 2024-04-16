@@ -21,6 +21,7 @@ import postgreslogo from '../images/postgreslogo.png'
 import recoillogo from '../images/recoillogo.jpg'
 import zodlogo from '../images/zod_logo.png'
 import turborepologo from '../images/turborepo_logo.png'
+import cicdlogo from '../images/cicd_logo.png'
 
 interface KnownThingsProps {}
 
@@ -75,6 +76,7 @@ const KnownThings: FC<KnownThingsProps> = () => {
             { tag: "Docker", logo: dockerlogo },
             { tag: "Git", logo: gitlogo },
             { tag: "turborepo", logo: turborepologo },
+            { tag: "ci/cd pipeline", logo: cicdlogo },
           ],
         },
       ];
