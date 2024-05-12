@@ -15,6 +15,7 @@ type Inputs = {
 export default function Page(){
     const [isAdmin ,setisAdmin]=useState<boolean>(false)
     const [messagedata , setMessagedata]=useState([])
+    const [loading, setLoading]=useState<boolean>(false)
     const {
         register,
         handleSubmit,
@@ -22,7 +23,8 @@ export default function Page(){
       } = useForm<Inputs>()
 
       const onSubmit: SubmitHandler<Inputs> =async(data)=>{
-         const fetched= await axios.post('https://dipakkhade-dev.vercel.app/api/admin',
+        setLoading(true)
+         const fetched= await axios.post('http://localhost:3000/api/admin',
             data
           )
 
@@ -30,9 +32,12 @@ export default function Page(){
             setMessagedata(fetched.data.usermessages)
             setisAdmin(true)
             toast('welcome Dipak')
+            setLoading(false)
 
           }else{
+
             toast.error('you are not admin')
+            setLoading(false)
           }
       }
     
@@ -85,12 +90,14 @@ export default function Page(){
 
 
           <div>
-            <button
-              type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
-              Sign in
-            </button>
+  
+        <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+
+
+{
+  loading ? 'Processing ...' : 'Verify'
+}
+        </button>
           </div>
         </form>
 
