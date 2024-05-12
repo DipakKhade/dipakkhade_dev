@@ -22,7 +22,7 @@ export default function Page(){
       } = useForm<Inputs>()
 
       const onSubmit: SubmitHandler<Inputs> =async(data)=>{
-         const fetched= await axios.post('http://localhost:3000/api/admin',
+         const fetched= await axios.post('https://dipakkhade-dev.vercel.app/api/admin',
             data
           )
 
