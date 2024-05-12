@@ -21,4 +21,4 @@ const userSchema= new Schema(
 
 const User = mongoose.models.User  ||  mongoose.model("User",userSchema)   //User is a collection name
 
-export default User 
+export default User ;
