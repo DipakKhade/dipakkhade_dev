@@ -18,7 +18,7 @@ export function ProjectCards() {
 }
 export const projects = [
   {
-    title: "Blog",
+    title: "Blogs",
     description:
       "  Next js 14  , NextAuth , tailwindcss , Docker , Recoil , Prisma , Postgresql ,  JsonWebTokens , axios , bcrypt , Contentful , shadcn ui  ",
     link:"https://drk-sigma.vercel.app/",
