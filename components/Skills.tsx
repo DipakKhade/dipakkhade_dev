@@ -23,6 +23,8 @@ import zodlogo from '../images/zod_logo.png'
 import turborepologo from '../images/turborepo_logo.png'
 import cicdlogo from '../images/cicd_logo.png'
 import grpclogo from '../images/grpc_logo.png'
+import kubernetes_logo from '../images/kubernates_logo.png'
+import trpc_logo from '../images/trpc_logo.png'
 
 interface KnownThingsProps {}
 
@@ -59,9 +61,9 @@ const KnownThings: FC<KnownThingsProps> = () => {
             { tag: "Express.js", logo: expressjslogo },
             { tag: "Zod", logo: zodlogo },
             { tag: "Next Auth", logo: nextauthlogo },
-            { tag: "JavaScript", logo: jslogo }, 
             { tag: "Redis", logo: redislogo },
-            {tag:"gRPC",logo:grpclogo}
+            {tag:"gRPC",logo:grpclogo},
+            {tag:"tRPC",logo:trpc_logo},
           ],
         },
         {
@@ -79,6 +81,8 @@ const KnownThings: FC<KnownThingsProps> = () => {
             { tag: "Git", logo: gitlogo },
             { tag: "turborepo", logo: turborepologo },
             { tag: "ci/cd pipeline", logo: cicdlogo },
+            {tag:"Kubernetres",logo:kubernetes_logo}
+
           ],
         },
       ];
