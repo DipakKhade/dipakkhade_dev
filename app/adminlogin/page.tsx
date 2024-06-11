@@ -138,7 +138,7 @@ export default function Page(){
         ))}
       </tbody>
     </table>
-  </div> :'only user have access to this page'
+  </div> :'only Admin have access to this page'
        }
                 </main>
     </>

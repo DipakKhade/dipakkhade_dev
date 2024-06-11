@@ -81,7 +81,7 @@ const KnownThings: FC<KnownThingsProps> = () => {
             { tag: "Git", logo: gitlogo },
             { tag: "turborepo", logo: turborepologo },
             { tag: "ci/cd pipeline", logo: cicdlogo },
-            {tag:"Kubernetres",logo:kubernetes_logo}
+            {tag:"Kubernetes",logo:kubernetes_logo}
 
           ],
         },
