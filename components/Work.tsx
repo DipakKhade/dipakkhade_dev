@@ -18,6 +18,18 @@ export function ProjectCards() {
 }
 export const projects = [
   {
+    title: "exchange",
+    description:
+      "  Nextjs , tailwindcss , Docker , Express , Redis PubSub , Redis Queue , WebSocket , postgres timescele db  ",
+    link:"https://github.com/DipakKhade/exchange",
+  },
+  {
+    title: "Blogs",
+    description:
+      "  Next js 14  , NextAuth , tailwindcss , Docker , Recoil , Prisma , Postgresql ,  JsonWebTokens , axios , bcrypt , Contentful , shadcn ui  ",
+    link:"https://drk-sigma.vercel.app/",
+  },
+  {
     title: "Blogs",
     description:
       "  Next js 14  , NextAuth , tailwindcss , Docker , Recoil , Prisma , Postgresql ,  JsonWebTokens , axios , bcrypt , Contentful , shadcn ui  ",
@@ -44,10 +56,5 @@ export const projects = [
     link: "https://github.com/DipakKhade/File-Sharing-webapp",
   },
   
-  {
-    title: "app to store a code snippets",
-    description:
-      " React , TypeScript , Tailwind CSS ",
-    link: "https://dipakcodesnippets.vercel.app/",
-  },
+  
 ];

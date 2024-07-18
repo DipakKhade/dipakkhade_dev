@@ -5,6 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from 'react-icons/fa'
 import { TbBrandNextjs } from "react-icons/tb";
+import { AnimatedBeamMultipleOutputDemo } from "./ui/socials";
 interface FooterProps {
     
 }
@@ -41,6 +42,8 @@ const Footer: FC<FooterProps> = () => {
                
             </ul>
         </div> */}
+
+{/* <AnimatedBeamMultipleOutputDemo/> */}
         <div className="sm:flex space-x-2"><div className="flex"><TbBrandNextjs className="mt-1"/><p>Coded In Next.js 14</p></div>
         <p>&copy; 2024 - Developed by Dipak Khade. All right reserved.</p>
         </div>
