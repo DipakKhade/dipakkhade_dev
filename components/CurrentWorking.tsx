@@ -31,7 +31,7 @@ export default function CurrentWorking() {
         </div>
 
         <div>
-          <WhatimLearning/>
+          <WhatimLearning />
         </div>
       </div>
     </>

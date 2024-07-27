@@ -13,7 +13,6 @@ export default function ThemeSwitch() {
       onClick={toggleTheme}
     >
       {theme === "light" ? <BsSun /> : <BsMoon />}
-      
     </button>
   );
 }
