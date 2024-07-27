@@ -20,7 +20,7 @@ export const HoverEffect = ({
     <div
       className={cn(
         "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
-        className
+        className,
       )}
     >
       {items.map((item, idx) => (
@@ -70,7 +70,7 @@ export const Card = ({
     <div
       className={cn(
         "rounded-2xl h-full w-full p-4 overflow-hidden dark:bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-50",
-        className
+        className,
       )}
     >
       <div className="relative z-50">
@@ -87,7 +87,12 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("dark:text-zinc-200 text-zinc-800 font-bold tracking-wide mt-4", className)}>
+    <h4
+      className={cn(
+        "dark:text-zinc-200 text-zinc-800 font-bold tracking-wide mt-4",
+        className,
+      )}
+    >
       {children}
     </h4>
   );
@@ -103,7 +108,7 @@ export const CardDescription = ({
     <p
       className={cn(
         "mt-8 text-zinc-700 dark:text-zinc-400 tracking-wide leading-relaxed text-sm",
-        className
+        className,
       )}
     >
       {children}
