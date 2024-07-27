@@ -1,4 +1,5 @@
 
+import CurrentWorking from '@/components/CurrentWorking'
 import DiscordButton from '@/components/Discord'
 import Footer from '@/components/Footer'
 import Skills from '@/components/Skills'
@@ -8,7 +9,7 @@ export default function Home() {
   <main>
     
     <DiscordButton/>
-
+<CurrentWorking/>
     <Skills/>
     <ProjectCards/>
     <Footer/>
