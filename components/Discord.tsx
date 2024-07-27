@@ -15,7 +15,6 @@ const DiscordButton: FC<DiscordButtonProps> = () => {
         <div className="mt-4">
           <TypewriterEffectSmoothDemo />
         </div>
-       
       </div>
     </div>
   );

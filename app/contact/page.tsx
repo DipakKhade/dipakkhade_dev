@@ -4,7 +4,7 @@ import Navbar from "../../components/header";
 import Footer from "../../components/Footer";
 import { FieldValues, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import {useSession , signIn, signOut} from 'next-auth/react'
+import { useSession, signIn, signOut } from "next-auth/react";
 import { WavyBackground } from "../../components/ui/wavy-background";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -16,13 +16,11 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 interface ConnectProps {}
 
 const Connect: FC<ConnectProps> = () => {
-
-  
-  const {data:session , status} = useSession()
-// console.log(session)
+  const { data: session, status } = useSession();
+  // console.log(session)
   const [isSubtting, setIsSubtting] = useState(false);
   const [sucessmsg, setSucessmsg] = useState(false);
-  const [loading ,setLoading]=useState(false)
+  const [loading, setLoading] = useState(false);
   //react hook form
   const {
     register,
@@ -32,8 +30,8 @@ const Connect: FC<ConnectProps> = () => {
   } = useForm();
 
   const Submission = async (data: FieldValues) => {
-    setLoading(true)
-    const local='http://localhost:3000/'
+    setLoading(true);
+    const local = "http://localhost:3000/";
     const domain = "https://dipakkhade-dev.vercel.app/";
     const res = await fetch(`${domain}/api/users`, {
       method: "POST",
@@ -48,11 +46,8 @@ const Connect: FC<ConnectProps> = () => {
 
     toast.success("Message send successfully ");
     reset();
-    setLoading(false)
-
-
+    setLoading(false);
   };
- 
 
   return (
     <>
@@ -84,149 +79,135 @@ const Connect: FC<ConnectProps> = () => {
             </p>
           </div>
 
-      
-
-        <div className="ml-12 md:ml-96 mt-4">
-          <div className=" hover:cursor-pointer flex text-xl mb-4 hover:text-blue-500">
-            <FiMail />
-            <p className="text-sm ml-4">dipakhade214@gmail.com</p>
-          </div>
-          <div>
-            <ul className="flex mt-4 space-x-5 items-center md:mt-0 lg:mb-6 text-sm font-medium sm:mb-0 mb-6">
-              <li>
-                <Link href={"https://github.com/DipakKhade"} target="_blank">
-                  <FaGithub className="text-2xl hover:text-blue-700 transition ease-in-out hover:-translate-y-1 hover:scale-110" />
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href={"https://twitter.com/dipakKhade272"}
-                  target="_blank"
-                >
-                  <FaXTwitter className="text-2xl hover:text-blue-700 transition ease-in-out hover:-translate-y-1 hover:scale-110" />
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href={"https://www.linkedin.com/in/dipak-khade-715389252/"}
-                  target="_blank"
-                >
-                  <FaLinkedin className="text-2xl hover:text-blue-700 transition ease-in-out hover:-translate-y-1 hover:scale-110" />
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href={
-                    "https://instagram.com/dipakkhade272?igshid=OGQ5ZDc2ODk2ZA=="
-                  }
-                  target="_blank"
-                >
-                  <FaInstagram className="text-2xl hover:text-blue-700 transition ease-in-out hover:-translate-y-1 hover:scale-110" />
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <section>
-        <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md mt-6">
-
-          <form onSubmit={handleSubmit(Submission)} className="space-y-8">
-          <div>
-              <label
-                htmlFor="subject"
-                className="block mb-2 text-sm font-medium"
-              >
-                Your Name
-              </label>
-              <input
-                {...register("subject")}
-                type="text"
-                id="subject"
-                name="subject"
-                className="block p-3 w-full text-sm rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800 dark:border-black/40 dark:bg-opacity-75"
-               
-                required
-              />
+          <div className="ml-12 md:ml-96 mt-4">
+            <div className=" hover:cursor-pointer flex text-xl mb-4 hover:text-blue-500">
+              <FiMail />
+              <p className="text-sm ml-4">dipakhade214@gmail.com</p>
             </div>
             <div>
-              <label
-                htmlFor="email"
-                className="block mb-2 text-sm font-medium"
-              >
-                Your email
-              </label>
+              <ul className="flex mt-4 space-x-5 items-center md:mt-0 lg:mb-6 text-sm font-medium sm:mb-0 mb-6">
+                <li>
+                  <Link href={"https://github.com/DipakKhade"} target="_blank">
+                    <FaGithub className="text-2xl hover:text-blue-700 transition ease-in-out hover:-translate-y-1 hover:scale-110" />
+                  </Link>
+                </li>
 
-              <input
-                {...register("email", {
-                  required: "Email is required",
-                })}
-                type="text"
-                id="email"
-                name="email"
-                className="shadow-sm border border-gray-300  text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-800 dark:border-black/40 dark:bg-opacity-75"
-                placeholder=""
-                required
-              />
+                <li>
+                  <Link
+                    href={"https://twitter.com/dipakKhade272"}
+                    target="_blank"
+                  >
+                    <FaXTwitter className="text-2xl hover:text-blue-700 transition ease-in-out hover:-translate-y-1 hover:scale-110" />
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href={"https://www.linkedin.com/in/dipak-khade-715389252/"}
+                    target="_blank"
+                  >
+                    <FaLinkedin className="text-2xl hover:text-blue-700 transition ease-in-out hover:-translate-y-1 hover:scale-110" />
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href={
+                      "https://instagram.com/dipakkhade272?igshid=OGQ5ZDc2ODk2ZA=="
+                    }
+                    target="_blank"
+                  >
+                    <FaInstagram className="text-2xl hover:text-blue-700 transition ease-in-out hover:-translate-y-1 hover:scale-110" />
+                  </Link>
+                </li>
+              </ul>
             </div>
-           
-            <div className="sm:col-span-2">
-              <label
-                htmlFor="message"
-                className="block mb-2 text-sm font-medium  "
-              >
+          </div>
+          <section>
+            <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md mt-6">
+              <form onSubmit={handleSubmit(Submission)} className="space-y-8">
+                <div>
+                  <label
+                    htmlFor="subject"
+                    className="block mb-2 text-sm font-medium"
+                  >
+                    Your Name
+                  </label>
+                  <input
+                    {...register("subject")}
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    className="block p-3 w-full text-sm rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800 dark:border-black/40 dark:bg-opacity-75"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block mb-2 text-sm font-medium"
+                  >
+                    Your email
+                  </label>
 
-                Your Message
+                  <input
+                    {...register("email", {
+                      required: "Email is required",
+                    })}
+                    type="text"
+                    id="email"
+                    name="email"
+                    className="shadow-sm border border-gray-300  text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-800 dark:border-black/40 dark:bg-opacity-75"
+                    placeholder=""
+                    required
+                  />
+                </div>
 
-              </label>
-              <textarea
-                {...register("message")}
-                id="message"
-                name="message"
-                className="block p-2.5 w-full text-sm rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800 dark:border-black/40 dark:bg-opacity-75"
-                placeholder="Leave a message..."
-              ></textarea>
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="message"
+                    className="block mb-2 text-sm font-medium  "
+                  >
+                    Your Message
+                  </label>
+                  <textarea
+                    {...register("message")}
+                    id="message"
+                    name="message"
+                    className="block p-2.5 w-full text-sm rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800 dark:border-black/40 dark:bg-opacity-75"
+                    placeholder="Leave a message..."
+                  ></textarea>
+                </div>
+                <button
+                  disabled={isSubmitting}
+                  type="submit"
+                  className="py-3 px-5 text-sm font-medium text-center bg-blue-400 dark:bg-gray-800 rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 text-blue-700"
+                >
+                  {loading ? (
+                    <div className="flex">
+                      <div
+                        className="inline-block h-6 w-6 p-1 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-primary motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                        role="status"
+                      >
+                        <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+                          Loading...
+                        </span>
+                      </div>
+                      <p className="pl-2 pt-1"> Processing...</p>
+                    </div>
+                  ) : (
+                    <span> Send message </span>
+                  )}
+                </button>
+              </form>
             </div>
-            <button
-              disabled={isSubmitting}
-              type="submit"
-              className="py-3 px-5 text-sm font-medium text-center bg-blue-400 dark:bg-gray-800 rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 text-blue-700"
-            >
-
-            {
-              loading ? 
-              <div className="flex">
-<div
-  className="inline-block h-6 w-6 p-1 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-primary motion-reduce:animate-[spin_1.5s_linear_infinite]"
-  role="status">
-  <span
-    className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-    >Loading...</span>
-</div>
-              <p className="pl-2 pt-1"> Processing...</p>      
-              </div>
-
-             :  <span> Send message  </span>
-          }
-             
-            </button>
-          </form>
-        </div>
-      </section>
+          </section>
         </WavyBackground>
 
-       
-
-        <WhatsAppIcon/>
-       
+        <WhatsAppIcon />
       </main>
-     
 
       <Footer />
-
-
     </>
   );
 };
