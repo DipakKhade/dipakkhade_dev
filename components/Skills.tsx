@@ -6,7 +6,7 @@ import tailwindlogo from "../images/tailwind_logo.png";
 import jslogo from "../images/js_logo.webp";
 import tslogo from "../images/ts_logo.png";
 import react from "../images/reactjs_logo.png";
-import nextlogo from "../images/next_logo.png";
+import nextlogo from "../images/next_logo.jpg";
 import nodejslogo from "../images/nodejs_logo.png";
 import expressjslogo from "../images/express_logo.png";
 import nextauthlogo from "../images/nextauth_logo.png";
@@ -25,6 +25,7 @@ import cicdlogo from "../images/cicd_logo.png";
 import grpclogo from "../images/grpc_logo.png";
 import kubernetes_logo from "../images/kubernates_logo.png";
 import trpc_logo from "../images/trpc_logo.png";
+import mssql_logo from '../images/mssql_logo.png'
 
 interface KnownThingsProps {}
 
@@ -72,6 +73,7 @@ const KnownThings: FC<KnownThingsProps> = () => {
         { tag: "MongoDB", logo: mongologo },
         { tag: "Postgresql", logo: postgreslogo },
         { tag: "Prisma", logo: prismalogo },
+        { tag: "MsSQL", logo: mssql_logo },
       ],
     },
     {
