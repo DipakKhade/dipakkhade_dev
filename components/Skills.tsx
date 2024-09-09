@@ -25,7 +25,7 @@ import cicdlogo from "../images/cicd_logo.png";
 import grpclogo from "../images/grpc_logo.png";
 import kubernetes_logo from "../images/kubernates_logo.png";
 import trpc_logo from "../images/trpc_logo.png";
-import mssql_logo from '../images/mssql_logo.png'
+import mssql_logo from "../images/mssql_logo.png";
 
 interface KnownThingsProps {}
 
@@ -86,6 +86,16 @@ const KnownThings: FC<KnownThingsProps> = () => {
         { tag: "Kubernetes", logo: kubernetes_logo },
       ],
     },
+    {
+      title: "Web3",
+      skills: [
+        {tag:'Decentralization',logo:''},
+        {tag:'BTC',logo:''},
+        {tag:'ETH',logo:''},
+        {tag:'SOL',logo:''},
+        {tag:'Native tokens',logo:''}
+      ],
+    },
   ];
 
   return (
@@ -114,13 +124,13 @@ const KnownThings: FC<KnownThingsProps> = () => {
                     <li key={skill.tag} className="py-3 sm:py-4">
                       <div className="flex items-center">
                         <div className="flex-shrink-0">
-                          <Image
+                         {skill.logo &&  <Image
                             src={skill.logo}
                             width={45}
                             height={50}
                             className="rounded-full"
                             alt="img"
-                          />
+                          />}
                         </div>
                         <div className="flex-1 min-w-0 ms-4">
                           <p className="text-sm font-medium text-gray-500 truncate transition ease-in-out hover:-translate-y-1">
