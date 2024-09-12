@@ -89,11 +89,11 @@ const KnownThings: FC<KnownThingsProps> = () => {
     {
       title: "Web3",
       skills: [
-        {tag:'Decentralization',logo:''},
-        {tag:'BTC',logo:''},
-        {tag:'ETH',logo:''},
-        {tag:'SOL',logo:''},
-        {tag:'Native tokens',logo:''}
+        { tag: "Decentralization", logo: "" },
+        { tag: "BTC", logo: "" },
+        { tag: "ETH", logo: "" },
+        { tag: "SOL", logo: "" },
+        { tag: "Native tokens", logo: "" },
       ],
     },
   ];
@@ -124,13 +124,15 @@ const KnownThings: FC<KnownThingsProps> = () => {
                     <li key={skill.tag} className="py-3 sm:py-4">
                       <div className="flex items-center">
                         <div className="flex-shrink-0">
-                         {skill.logo &&  <Image
-                            src={skill.logo}
-                            width={45}
-                            height={50}
-                            className="rounded-full"
-                            alt="img"
-                          />}
+                          {skill.logo && (
+                            <Image
+                              src={skill.logo}
+                              width={45}
+                              height={50}
+                              className="rounded-full"
+                              alt="img"
+                            />
+                          )}
                         </div>
                         <div className="flex-1 min-w-0 ms-4">
                           <p className="text-sm font-medium text-gray-500 truncate transition ease-in-out hover:-translate-y-1">
