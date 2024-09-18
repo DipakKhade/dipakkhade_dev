@@ -8,7 +8,9 @@ export function ProjectCards() {
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         <div className=" font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-blue-500 to-blue-600 py-8">
-          <h2 className="ml-16 md:ml-[40vw] text-4xl">Projects</h2>
+          <h2 className="ml-16 pt-[225px] md:pt-0 md:ml-[40vw] text-4xl">
+            Projects
+          </h2>
           <HoverEffect items={projects} />
         </div>
       </div>

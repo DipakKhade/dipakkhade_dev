@@ -9,7 +9,7 @@ export default function Home() {
       <DiscordButton />
       <CurrentWorking />
       <Skills />
-      <ProjectCards />
+      {/* <ProjectCards /> */}
       <Footer />
     </main>
   );
