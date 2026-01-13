@@ -6,7 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { AnimatedBeamMultipleOutputDemo } from "./ui/socials";
-interface FooterProps {}
+interface FooterProps { }
 
 const Footer: FC<FooterProps> = () => {
   return (
@@ -44,7 +44,7 @@ const Footer: FC<FooterProps> = () => {
             <TbBrandNextjs className="mt-1" />
             <p>Coded In Next.js 14</p>
           </div>
-          <p>&copy; 2024 - Developed by Dipak Khade. All right reserved.</p>
+          <p>&copy; 2024 - Developed by Dipak Khade. </p>
         </div>
 
         <div>
