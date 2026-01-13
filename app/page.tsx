@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <DiscordButton />
-      <CurrentWorking />
+      { /* <CurrentWorking /> */}
       <Skills />
       {/* <ProjectCards /> */}
       <Footer />
